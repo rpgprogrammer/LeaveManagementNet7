@@ -4,6 +4,7 @@ using LeaveManagement.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagement.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230311165201_AddindRolesANdSEEding")]
+    partial class AddindRolesANdSEEding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,41 +109,37 @@ namespace LeaveManagement.Web.Data.Migrations
                         {
                             Id = "82a4fa39-60b2-43b7-8598-bf794f2f17e7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "128d8000-c633-480f-a983-bd2201be9b4c",
+                            ConcurrencyStamp = "02c98ed0-f6ed-4425-a16c-6458ac377cd0",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "paulgeorgecode@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "System",
                             LastName = "Admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "PAULGEORGECODE@GMAIL.COM",
-                            NormalizedUserName = "PAULGEORGECODE@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEObWLGJhI/e/UGP78zB2xfPuJ4L5x53iT2W5g5YNGZz+PLUdUo556YId7765fIA1Cg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHfC0RUr8AGFfXSI2KKLjpVZeJUvQxBJf/PpeWgi34ahkWtavzBlxz/nlwpvJCPJYg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cf336865-3cdd-4d1d-a29f-04b7002e35c7",
-                            TwoFactorEnabled = false,
-                            UserName = "paulgeorgecode@gmail.com"
+                            SecurityStamp = "643f2df1-2199-4990-b376-a58bdc1fda1c",
+                            TwoFactorEnabled = false
                         },
                         new
                         {
                             Id = "82a4fa39-60b2-60b2-8598-bf794f2f17e7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "38502d65-4777-4752-9d6a-9e253e26061e",
+                            ConcurrencyStamp = "00be7e3d-d8e0-4b6d-8fdd-19a47cc436ff",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "userpaulgeorgecode@gmail.com",
-                            EmailConfirmed = true,
+                            Email = "paulgeorgecode@gmail.com",
+                            EmailConfirmed = false,
                             FirstName = "System",
                             LastName = "User",
                             LockoutEnabled = false,
-                            NormalizedEmail = "USERPAULGEORGECODE@GMAIL.COM",
-                            NormalizedUserName = "USERPAULGEORGECODE@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBH7eehO8i3AsDi07Sx3xABmHWCd2hxQfjgvnCZ7hu2W9Wkc7R9cr8eb2GjCHghvMQ==",
+                            NormalizedEmail = "PAULGEORGECODE@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJcLvhzBZjTRaEAu8nk6pscY+CBhfhEjBQxpyjhP7ShWFtkdNvbg/4C2HqFc/OHv6A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "25a56c11-4c1a-488f-929b-07a71b479194",
-                            TwoFactorEnabled = false,
-                            UserName = "userpaulgeorgecode@gmail.com"
+                            SecurityStamp = "afe418a0-d3f0-4f0d-a8f0-98bbaa1e1450",
+                            TwoFactorEnabled = false
                         });
                 });
 
