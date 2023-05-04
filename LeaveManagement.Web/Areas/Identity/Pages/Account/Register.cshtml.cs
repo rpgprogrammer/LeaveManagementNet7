@@ -88,9 +88,9 @@ namespace LeaveManagement.Web.Areas.Identity.Pages.Account
             [Display(Name = "Last Name")]
             public string Lastname { get; set; }
             [DataType(DataType.Date)]
-            public DateTime DateOfBirth { get; set; }
+            public DateTime? DateOfBirth { get; set; }
             [DataType(DataType.Date)]
-            public DateTime DateJoined { get; set; }
+            public DateTime? DateJoined { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -133,8 +133,8 @@ namespace LeaveManagement.Web.Areas.Identity.Pages.Account
 
                 user.FirstName = Input.Firstname;
                 user.LastName = Input.Lastname;
-                user.DateJoined = Input.DateJoined; 
-                user.DateOfBirth = Input.DateOfBirth;
+                user.DateJoined = Input.DateJoined ?? default; 
+                user.DateOfBirth = Input.DateOfBirth ?? default;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
